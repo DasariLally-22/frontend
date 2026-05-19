@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #fdf6f0, #fcefee, #fff8f5);
+    color: #444;
+    line-height: 1.6;
+}
+.navbar {
+    background-color: #fffaf7;
+    padding: 18px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #ff6b81;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-size: 17px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.nav-links a:hover {
+    color: #ff6b81;
+}
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 70px;
+    background: linear-gradient(to right, #fdecec, #fff4f4);
+}
+.hero-text {
+    width: 50%;
+}
+.hero-text h1 {
+    font-size: 55px;
+    color: #ff4f70;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.hero-text p {
+    font-size: 22px;
+    color: #666;
+    margin-bottom: 25px;
+}
+.hero-text button {
+    padding: 14px 30px;
+    border: none;
+    background-color: #ff6b81;
+    color: white;
+    font-size: 18px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+.hero-text button:hover {
+    background-color: #ff4f70;
+    transform: scale(1.05);
+}
+.hero-image img {
+    width: 480px;
+    border-radius: 25px;
+}
+.about {
+    padding: 80px 60px;
+    text-align: center;
+    background-color: #fffdfb;
+}
+.about h2 {
+    font-size: 40px;
+    color: #ff6b81;
+    margin-bottom: 40px;
+}
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.about-text {
+    width: 40%;
+    font-size: 18px;
+    color: #666;
+    text-align: left;
+}
+.about-images {
+    display: flex;
+    gap: 20px;
+}
+.about-images img {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+.about-images img:hover {
+    transform: scale(1.05);
+}
+.menu {
+    padding: 80px 60px;
+    background: linear-gradient(to bottom, #fff1f3, #fff8f8);
+    text-align: center;
+}
+.menu h2 {
+    font-size: 40px;
+    color: #ff6b81;
+    margin-bottom: 40px;
+}
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+}
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 25px;
+    transition: 0.3s;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+.card:hover {
+    transform: translateY(-10px);
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+.card h3 {
+    margin-top: 15px;
+    color: #444;
+    font-size: 22px;
+}
+.card p {
+    margin: 10px 0;
+    color: #ff6b81;
+    font-size: 18px;
+    font-weight: 600;
+}
+.card button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff6b81;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.card button:hover {
+    background-color: #ff4f70;
+}
+.booking {
+    padding: 80px 60px;
+    background: linear-gradient(to right, #fff0f5, #fff7fa);
+}
+.booking h2 {
+    text-align: center;
+    font-size: 40px;
+    color: #ff6b81;
+    margin-bottom: 40px;
+}
+form {
+    max-width: 650px;
+    margin: auto;
+    background-color: white;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+}
+form label {
+    margin-top: 15px;
+    margin-bottom: 6px;
+    color: #555;
+    font-weight: 500;
+}
+form input,
+form textarea {
+    padding: 14px;
+    border: 1px solid #f3c5cf;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+}
+form input:focus,
+form textarea:focus {
+    border-color: #ff6b81;
+}
+form button {
+    margin-top: 25px;
+    padding: 14px;
+    border: none;
+    background-color: #ff6b81;
+    color: white;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+form button:hover {
+    background-color: #ff4f70;
+}
+.footer {
+    background-color: #fff5f5;
+    text-align: center;
+    padding: 25px;
+    color: #666;
+    border-top: 1px solid #f0d6dd;
+}
+.social-links {
+    margin-top: 12px;
+}
+.social-links a {
+    text-decoration: none;
+    color: #ff6b81;
+    margin: 0 12px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.social-links a:hover {
+    color: #ff4f70;
+}

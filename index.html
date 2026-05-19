@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Foodie Hub</div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>Welcome to Foodie Hub</h1>
+            <p>Delicious Food Served To Your Place</p>
+            <button>Order Now</button>
+        </div>
+
+        <div class="hero-image">
+            <img src="korean.jpg" alt="Restaurant Food">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>About Us</h2>
+
+        <div class="about-container">
+            <div class="about-text">
+                <p>
+                    <p>
+                        Welcome to Foodie Hub, where we bring the authentic taste of Korea to your table. 
+                        Our restaurant is inspired by the rich flavors, colorful dishes, and warm culture 
+                        of Korean cuisine. From spicy Kimchi and delicious Bibimbap to Korean BBQ and 
+                        savory noodles, every dish is prepared with fresh ingredients and traditional recipes. 
+                        We aim to create a cozy Korean-style dining experience where food lovers can enjoy 
+                        tasty meals, beautiful presentation, and unforgettable flavors with family and friends.
+                    </p>
+                </p>
+            </div>
+
+            <div class="about-images">
+                <img src="k1.jpg" alt="Restaurant">
+                <img src="k2.jpg" alt="Dining">
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <h2>Our Menu</h2>
+
+        <div class="menu-container">
+
+            <div class="card">
+                <img src="ramen.jpg" alt="Ramen">
+                <h3>Ramen</h3>
+                <p>₹299</p>
+                <button>Order</button>
+            </div>
+
+            <div class="card">
+                <img src="kimchi.jpg" alt="kimchi">
+                <h3>Kimchi</h3>
+                <p>₹199</p>
+                <button>Order</button>
+            </div>
+
+            <div class="card">
+                <img src="teokbokki.jpg" alt="teokbokki">
+                <h3>Ttekbokki</h3>
+                <p>₹249</p>
+                <button>Order</button>
+            </div>
+
+            <div class="card">
+                <img src="kimbap.jpg"  alt="kimbap">
+                <h3>Kimbap</h3>
+                <p>₹149</p>
+                <button>Order</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="booking" id="contact">
+        <h2>Book Your Table</h2>
+
+        <form>
+            <label for="name">Full Name</label>
+            <input type="text" placeholder="Enter your name" required id="name">
+
+            <label for="email">Email</label>
+            <input type="email" placeholder="Enter your email" required id="email">
+
+            <label for="num">Phone Number</label>
+            <input type="number" placeholder="Enter phone number" required id="num">
+
+            <label for="person">Number of Persons</label>
+            <input type="number" placeholder="Number of persons" required id="person">
+
+            <label for="date">Date</label>
+            <input type="date" required id="date">
+
+            <label>Message</label>
+            <textarea placeholder="Enter your message"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy 2026 Foodie Hub. All Rights Reserved.</p>
+
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+</body>
+</html>
