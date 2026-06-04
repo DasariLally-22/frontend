@@ -1,135 +1,401 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foodie Hub</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TaskFlow Pro</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#1e293b,#312e81);
+    color:white;
+    padding:30px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+header{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+header h1{
+    font-size:3rem;
+    color:#38bdf8;
+}
+
+header p{
+    color:#cbd5e1;
+    margin-top:10px;
+}
+
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.card,.weather-card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+.card h2,.weather-card h2{
+    margin-bottom:15px;
+    color:#67e8f9;
+}
+
+input,textarea{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    margin-bottom:12px;
+    background:#e2e8f0;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:linear-gradient(45deg,#06b6d4,#3b82f6);
+    color:white;
+    font-weight:bold;
+}
+
+.task-section{
+    margin-top:30px;
+}
+
+#taskList{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.task-card{
+    background:white;
+    color:black;
+    padding:20px;
+    border-radius:15px;
+    border-left:6px solid #3b82f6;
+}
+
+.task-card h3{
+    margin-bottom:10px;
+}
+
+.task-card p{
+    margin-bottom:10px;
+}
+
+.btn-group{
+    display:flex;
+    gap:10px;
+}
+
+.edit-btn{
+    background:#10b981;
+}
+
+.delete-btn{
+    background:#ef4444;
+}
+
+.weather-card{
+    margin-top:30px;
+}
+
+.weather-box{
+    margin-top:15px;
+    padding:15px;
+    border-radius:12px;
+    background:rgba(255,255,255,0.1);
+}
+
+.date{
+    color:#64748b;
+    font-size:12px;
+}
+
+#weatherResult{
+    margin-top:15px;
+}
+</style>
+
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">Foodie Hub</div>
 
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<div class="container">
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-text">
-            <h1>Welcome to Foodie Hub</h1>
-            <p>Delicious Food Served To Your Place</p>
-            <button>Order Now</button>
-        </div>
+<header>
+<h1>🚀 TaskFlow Pro</h1>
+<p>Organize. Prioritize. Achieve.</p>
+</header>
 
-        <div class="hero-image">
-            <img src="korean.jpg" alt="Restaurant Food">
-        </div>
-    </section>
+<div class="dashboard">
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <h2>About Us</h2>
+<div class="card">
+<h2>Add New Task</h2>
 
-        <div class="about-container">
-            <div class="about-text">
-                <p>
-                    <p>
-                        Welcome to Foodie Hub, where we bring the authentic taste of Korea to your table. 
-                        Our restaurant is inspired by the rich flavors, colorful dishes, and warm culture 
-                        of Korean cuisine. From spicy Kimchi and delicious Bibimbap to Korean BBQ and 
-                        savory noodles, every dish is prepared with fresh ingredients and traditional recipes. 
-                        We aim to create a cozy Korean-style dining experience where food lovers can enjoy 
-                        tasty meals, beautiful presentation, and unforgettable flavors with family and friends.
-                    </p>
-                </p>
-            </div>
+<form id="taskForm">
 
-            <div class="about-images">
-                <img src="k1.jpg" alt="Restaurant">
-                <img src="k2.jpg" alt="Dining">
-            </div>
-        </div>
-    </section>
+<input
+type="text"
+id="taskName"
+placeholder="Task Name"
+required>
 
-    <!-- Menu Section -->
-    <section class="menu" id="menu">
-        <h2>Our Menu</h2>
+<textarea
+id="taskDescription"
+placeholder="Task Description"
+required>
+</textarea>
 
-        <div class="menu-container">
+<button type="submit">
+Add Task
+</button>
 
-            <div class="card">
-                <img src="ramen.jpg" alt="Ramen">
-                <h3>Ramen</h3>
-                <p>₹299</p>
-                <button>Order</button>
-            </div>
+</form>
+</div>
 
-            <div class="card">
-                <img src="kimchi.jpg" alt="kimchi">
-                <h3>Kimchi</h3>
-                <p>₹199</p>
-                <button>Order</button>
-            </div>
+<div class="card">
+<h2>Search Tasks</h2>
 
-            <div class="card">
-                <img src="teokbokki.jpg" alt="teokbokki">
-                <h3>Ttekbokki</h3>
-                <p>₹249</p>
-                <button>Order</button>
-            </div>
+<input
+type="text"
+id="searchInput"
+placeholder="Search Task">
 
-            <div class="card">
-                <img src="kimbap.jpg"  alt="kimbap">
-                <h3>Kimbap</h3>
-                <p>₹149</p>
-                <button>Order</button>
-            </div>
+</div>
 
-        </div>
-    </section>
+</div>
 
-    <!-- Booking Form -->
-    <section class="booking" id="contact">
-        <h2>Book Your Table</h2>
+<div class="task-section">
+<h2>Your Tasks</h2>
+<div id="taskList"></div>
+</div>
 
-        <form>
-            <label for="name">Full Name</label>
-            <input type="text" placeholder="Enter your name" required id="name">
+<div class="weather-card">
+<h2>🌤 Weather Finder</h2>
 
-            <label for="email">Email</label>
-            <input type="email" placeholder="Enter your email" required id="email">
+<input
+type="text"
+id="cityInput"
+placeholder="Enter City Name">
 
-            <label for="num">Phone Number</label>
-            <input type="number" placeholder="Enter phone number" required id="num">
+<button onclick="getWeather()">
+Get Weather
+</button>
 
-            <label for="person">Number of Persons</label>
-            <input type="number" placeholder="Number of persons" required id="person">
+<div id="weatherResult"></div>
+</div>
 
-            <label for="date">Date</label>
-            <input type="date" required id="date">
+</div>
 
-            <label>Message</label>
-            <textarea placeholder="Enter your message"></textarea>
+<script>
 
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+const taskForm=document.getElementById("taskForm");
+const taskName=document.getElementById("taskName");
+const taskDescription=document.getElementById("taskDescription");
+const taskList=document.getElementById("taskList");
+const searchInput=document.getElementById("searchInput");
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy 2026 Foodie Hub. All Rights Reserved.</p>
+let tasks=JSON.parse(localStorage.getItem("tasks")) || [];
+let editTaskId=null;
 
-        <div class="social-links">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">Twitter</a>
-        </div>
-    </footer>
+function renderTasks(taskArray=tasks){
+
+taskList.innerHTML=taskArray.map(task=>`
+
+<div class="task-card">
+
+<h3>${task.name}</h3>
+
+<p>${task.description}</p>
+
+
+<div class="btn-group">
+
+<button
+class="edit-btn"
+onclick="editTask(${task.id})">
+Edit
+</button>
+
+<button
+class="delete-btn"
+onclick="deleteTask(${task.id})">
+Delete
+</button>
+
+</div>
+
+</div>
+
+`).join("");
+
+}
+
+taskForm.onsubmit=function(e){
+
+e.preventDefault();
+
+const name=taskName.value.trim();
+const description=taskDescription.value.trim();
+
+if(editTaskId){
+
+tasks=tasks.map(task=>{
+
+if(task.id===editTaskId){
+
+return{
+...task,
+name,
+description
+};
+
+}
+
+return task;
+
+});
+
+editTaskId=null;
+
+document.querySelector(
+"#taskForm button"
+).textContent="Add Task";
+
+}
+else{
+
+tasks.push({
+id:Date.now(),
+name,
+description,
+createdAt:new Date().toLocaleString()
+});
+
+}
+
+localStorage.setItem(
+"tasks",
+JSON.stringify(tasks)
+);
+
+renderTasks();
+
+taskForm.reset();
+
+};
+
+function editTask(id){
+
+const task=tasks.find(
+task=>task.id===id
+);
+
+taskName.value=task.name;
+taskDescription.value=task.description;
+
+editTaskId=id;
+
+document.querySelector(
+"#taskForm button"
+).textContent="Update Task";
+
+}
+
+function deleteTask(id){
+
+tasks=tasks.filter(
+task=>task.id!==id
+);
+
+localStorage.setItem(
+"tasks",
+JSON.stringify(tasks)
+);
+
+renderTasks();
+
+}
+
+searchInput.addEventListener("input",()=>{
+
+const keyword=
+searchInput.value.toLowerCase();
+
+const filteredTasks=
+tasks.filter(task=>
+task.name.toLowerCase()
+.includes(keyword)
+);
+
+renderTasks(filteredTasks);
+
+});
+
+async function getWeather(){
+
+const city=
+document.getElementById("cityInput").value;
+
+const result=
+document.getElementById("weatherResult");
+
+try{
+
+const response=await fetch(
+`https://wttr.in/${city}?format=j1`
+);
+
+const data=await response.json();
+
+result.innerHTML=`
+<div class="weather-box">
+<h3>${city}</h3>
+<p>🌡 Temperature:
+${data.current_condition[0].temp_C} °C</p>
+<p>☁ Condition:
+${data.current_condition[0].weatherDesc[0].value}</p>
+<p>💧 Humidity:
+${data.current_condition[0].humidity}%</p>
+</div>
+`;
+
+}
+catch{
+
+result.innerHTML=
+"<p>Unable to fetch weather.</p>";
+
+}
+
+}
+
+renderTasks();
+
+</script>
+
 </body>
 </html>
